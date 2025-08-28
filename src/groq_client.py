@@ -22,6 +22,21 @@ Question: Explain the difference between Python lists and tuples.
 Now, generate questions for this role/subject.
 """
 
+def build_multi_shot_prompt(role_or_subject):
+    return f"""
+You are an AI recruiter. Generate interview questions for the role or subject: {role_or_subject}.
+
+Examples:
+1) Role: Data Scientist
+   Question: Explain the difference between supervised and unsupervised learning.
+2) Role: Frontend Developer
+   Question: What is the difference between flexbox and grid in CSS?
+3) Role: Product Manager
+   Question: How do you prioritize features for a new product?
+
+Now, generate questions for this role/subject.
+"""
+
 # ---- AI Response ----
 
 
