@@ -11,6 +11,16 @@ You are an AI recruiter. Generate interview questions for the role or subject: {
 Explain your reasoning step by step before generating the questions.
 """
 
+def build_one_shot_prompt(role_or_subject):
+    return f"""
+You are an AI recruiter. Generate interview questions for the role or subject: {role_or_subject}.
+
+Example:
+Role: Software Engineer
+Question: Explain the difference between Python lists and tuples.
+
+Now, generate questions for this role/subject.
+"""
 
 # ---- AI Response ----
 
