@@ -5,11 +5,13 @@ from src.config import GROQ_API_KEY, DEFAULT_MODEL, DEFAULT_TEMPERATURE, DEFAULT
 # Initialize Groq client
 client = Groq(api_key=GROQ_API_KEY)
 
+
 def build_zero_shot_prompt(role_or_subject):
     return f"""
 You are an AI recruiter. Generate interview questions for the role or subject: {role_or_subject}.
 Explain your reasoning step by step before generating the questions.
 """
+
 
 def build_one_shot_prompt(role_or_subject):
     return f"""
@@ -21,6 +23,7 @@ Question: Explain the difference between Python lists and tuples.
 
 Now, generate questions for this role/subject.
 """
+
 
 def build_multi_shot_prompt(role_or_subject):
     return f"""
